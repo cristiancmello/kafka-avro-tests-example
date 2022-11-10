@@ -1,0 +1,19 @@
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  kafka:
+    producer:
+      auto.register.schemas: true
+      value-serializer: com.example.kafkaavrotestsexample.CustomKafkaAvroSerializer
+    consumer:
+      group-id: group_id
+      auto-offset-reset: earliest
+      value-deserializer: com.example.kafkaavrotestsexample.CustomKafkaAvroDeserializer
+    properties:
+      schema:
+        registry:
+          url: mock://
+      specific:
+        avro:
+          reader: true

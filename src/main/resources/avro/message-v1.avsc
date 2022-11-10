@@ -1,0 +1,9 @@
+{
+  "type": "record",
+  "namespace": "com.example.kafkaavrotestsexample",
+  "name": "MessageAvro",
+  "version": "1",
+  "fields": [
+    { "name": "content", "type": "string", "doc": "Content of the Message", "avro.java.string": "String" }
+  ]
+}
